@@ -3,116 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gerenciador de Produtos</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/stylesIndex.css" class="css" />
+    <title>Loja de produtos GP2</title>
   </head>
   <body>
     <header>
-      <div class="container-header">
-        <h1>📋 Gerenciador de Produtos</h1>
-        <p class="subtitle">Sistema de Gestão de Produtos</p>
-      </div>
+      <h1>Loja de produtos</h1>
+      <h3>Grupo 2</h3>
     </header>
 
-    <main>
-      <div class="container">
-        <section class="form-section">
-          <h2>Adicionar ou Editar Produtos</h2>
-          <form id="ProdutoForm">
-            <div class="form-group">
-              <label for="nome">Nome do Produto</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Ex: Celular"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="preco">Preço:</label>
-              <input
-                type="number"
-                id="preco"
-                name="preco"
-                placeholder="1000.00"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="estoque">Estoque:</label>
-              <input
-                type="number"
-                id="estoque"
-                name="estoque"
-                placeholder="10"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="categoria">Categoria:</label>
-              <input
-                type="text"
-                id="categoria"
-                name="categoria"
-                placeholder="Tecnologia"
-                required
-              />
-            </div>
-
-            <div class="form-buttons">
-              <button type="submit" class="btn btn-primary">
-                Salvar Produto
-              </button>
-              <button type="button" class="btn btn-secondary" id="btnLimpar">
-                Limpar Formulário
-              </button>
-            </div>
-          </form>
-        </section>
-        <section class="list-section">
-          <h2>Lista de Produtos</h2>
-
-          <div class="list-controls">
-            <button class="btn btn-success" id="btnRecarregar">
-              🔄 Recarregar Lista
-            </button>
-            <div class="search-box">
-              <select id="searchType" title="Tipo de busca">
-                <option value="nome">Buscar por Nome</option>
-                <option value="id">Buscar por ID</option>
-              </select>
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Digite o valor para buscar..."
-              />
-              <button class="btn btn-primary" id="btnBuscar">Buscar</button>
-            </div>
-          </div>
-
-          <div id="loadingMessage" class="message message-info">
-            Carregando produtos...
-          </div>
-          <div id="emptyMessage" class="message message-info">
-            Nenhum produto cadastrado.
-          </div>
-          <div id="produtoList" class="produtos-table-container"></div>
-        </section>
-      </div>
-    </main>
-    <div id="modalMessage" class="modal-message">
-      <div class="modal-content">
-        <p id="modalText"></p>
-        <button class="btn btn-primary" onclick="fecharModal()">Fechar</button>
-      </div>
+    <div class="nav">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./pages/produto.html">Produtos</a></li>
+        <li><a href="./pages/about.html">Sobre nós</a></li>
+      </ul>
     </div>
 
-    <footer>
-      <p>© 2026 - Sistema de Gestão de produtos</p>
-    </footer>
-    <script src="script.js"></script>
+    <main>
+      <div class="card">
+        <h2>
+          Desafio de integração com <span>backend</span> e <span>frontend</span>
+        </h2>
+        <p>
+          Nesta atividade foi criado o banco de dados de Produtos com o
+          <span class="pg">PostGreSQL</span>,<br />
+          desenvolvido a <span class="api">API RestFull</span> de Produtos com
+          <span class="node">Node.JS</span>,
+          <br />
+          E conectado ao frontend com HTML
+        </p>
+      </div>
+    </main>
+
+    <footer>&Copy, todos os diretos reservados</footer>
   </body>
 </html>

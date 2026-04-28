@@ -172,14 +172,14 @@ async function deletar(req, res) {
 // FUNÇÃO: buscarPorCategoria (ASSÍNCRONA)
 // ROTA: GET /produtos/categoria/:categoria
 // ============================================================
-async function buscarPorCategoria(req, res) {
+async function buscarPorNome(req, res) {
   try {
-    const { categoria } = req.params;
-    const produtos = await ProdutoModel.buscarPorCategoria(categoria);
+    const { nome } = req.params;
+    const produtos = await ProdutoModel.buscarPorNome(nome);
     res.status(200).json(produtos);
   } catch (erro) {
     res.status(500).json({ 
-      mensagem: 'Erro ao buscar produtos por categoria',
+      mensagem: 'Erro ao buscar produtos por Nome',
       erro: erro.message 
     });
   }
@@ -194,5 +194,5 @@ module.exports = {
   criar,
   atualizar,
   deletar,
-  buscarPorCategoria
+  buscarPorNome
 };

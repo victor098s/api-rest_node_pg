@@ -112,14 +112,14 @@ async function deletar(id) {
 // PARÂMETRO: categoria (string)
 // RETORNO: Promise com array de produtos
 // ============================================================
-async function buscarPorCategoria(categoria) {
+async function buscarPorNome(nome) {
   // ILIKE é o LIKE case-insensitive do PostgreSQL
   // (no SQLite usávamos LIKE normal)
-  const sql = 'SELECT * FROM produtos WHERE categoria ILIKE $1';
+  const sql = 'SELECT * FROM produtos WHERE nome ILIKE $1';
   
   const result = await pool.query(
     sql,
-    [`%${categoria}%`]  // % = wildcard (qualquer texto)
+    [`%${nome}%`]  // % = wildcard (qualquer texto)
   );
   
   return result.rows;
@@ -134,5 +134,5 @@ module.exports = {
   criar,
   atualizar,
   deletar,
-  buscarPorCategoria
+  buscarPorNome
 };

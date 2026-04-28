@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+const path = require('path')
 
 // Porta vem do .env, ou usa 3000 como padrão
 const PORT = process.env.PORT || 3000;

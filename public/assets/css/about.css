@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(150deg, #262626, #2e2e2e, #343131);
+  color: #f0f0f0;
+}
+
+header {
+  background-color: #0c0c0c;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  padding: 10px;
+}
+
+li:hover {
+  background-color: #5a7dfb;
+  color: #ffffff;
+}
+
+main{
+    min-height: 69.22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 550px;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    margin: 18px;
+    transition: transform 0.3s;
+
+}
+
+.card img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 35px 0px rgba(249, 249, 249, 0.18);
+}
+
+.redbear{
+    color: #df5900;
+}
+
+.dev{
+    color: #5a7dfb;
+}
+
+.senai{
+    color: #ee2d2d;
+}
+
+
+footer {
+  text-align: center;
+  background-color: #0c0c0c;
+  padding: 1rem;
+  margin-top: 2rem;
+}
