@@ -1,14 +1,5 @@
-// =============================================
-// script.js — Lógica do Front-end
-// Comunicação com a API REST de Produtos
-// =============================================
-
-// ─── VARIÁVEL GLOBAL ─────────────────────────
 let produtoEmEdicao = null;
 
-// ═════════════════════════════════════════════
-// SEÇÃO 1: FUNÇÕES AUXILIARES
-// ═════════════════════════════════════════════
 
 function mostrarMensagem(mensagem, tipo = "info") {
   const modal = document.getElementById("modalMessage");
@@ -60,7 +51,7 @@ function escaparAspa(valor) {
 async function carregarProdutos() {
   const loadingMessage = document.getElementById("loadingMessage");
   const emptyMessage = document.getElementById("emptyMessage");
-  const lista = document.getElementById("clientsList");
+  const lista = document.getElementById("produtoList");
 
   loadingMessage.style.display = "block";
   emptyMessage.style.display = "none";
@@ -159,7 +150,7 @@ async function deletarProduto(id) {
 // ═════════════════════════════════════════════
 
 function exibirTabela(produtos) {
-  const clientsList = document.getElementById("clientsList");
+  const produtoList = document.getElementById("produtosList");
 
   let html = `
     <table>
@@ -205,7 +196,7 @@ function exibirTabela(produtos) {
   });
 
   html += "</tbody></table>";
-  clientsList.innerHTML = html;
+  produtoList.innerHTML = html;
 }
 
 function editarProduto(id, nome, preco, estoque, categoria) {
@@ -224,18 +215,14 @@ function editarProduto(id, nome, preco, estoque, categoria) {
     .scrollIntoView({ behavior: "smooth" });
 }
 
-// ═════════════════════════════════════════════
-// SEÇÃO 4: BUSCA E FILTRO
-// ═════════════════════════════════════════════
-
 async function buscarProdutos(tipo, valor) {
   const loadingMessage = document.getElementById("loadingMessage");
   const emptyMessage = document.getElementById("emptyMessage");
-  const clientsList = document.getElementById("clientsList");
+  const produtosList = document.getElementById("produtosList");
 
   loadingMessage.style.display = "block";
   emptyMessage.style.display = "none";
-  clientsList.innerHTML = "";
+  produtosList.innerHTML = "";
 
   try {
     let url = "";

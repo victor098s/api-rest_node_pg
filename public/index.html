@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerenciador de Produtos</title>
-    <!-- Carrega o CSS da pasta public/ (não colocar "public/" no caminho!) -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,13 +16,9 @@
 
     <main>
       <div class="container">
-        <!-- ============================== -->
-        <!-- SEÇÃO DO FORMULÁRIO            -->
-        <!-- ============================== -->
         <section class="form-section">
           <h2>Adicionar ou Editar Produtos</h2>
           <form id="ProdutoForm">
-            <!-- Campo: Nome -->
             <div class="form-group">
               <label for="nome">Nome do Produto</label>
               <input
@@ -35,7 +30,6 @@
               />
             </div>
 
-            <!-- Campo: Preço -->
             <div class="form-group">
               <label for="preco">Preço:</label>
               <input
@@ -46,7 +40,6 @@
                 required
               />
             </div>
-            <!-- Campo: Estoque -->
             <div class="form-group">
               <label for="estoque">Estoque:</label>
               <input
@@ -58,7 +51,6 @@
               />
             </div>
 
-            <!-- Campo: Categoria -->
             <div class="form-group">
               <label for="categoria">Categoria:</label>
               <input
@@ -70,7 +62,6 @@
               />
             </div>
 
-            <!-- Botões de ação do formulário -->
             <div class="form-buttons">
               <button type="submit" class="btn btn-primary">
                 Salvar Produto
@@ -81,14 +72,9 @@
             </div>
           </form>
         </section>
-
-        <!-- ============================== -->
-        <!-- SEÇÃO DE LISTAGEM              -->
-        <!-- ============================== -->
         <section class="list-section">
           <h2>Lista de Produtos</h2>
 
-          <!-- Controles: recarregar e pesquisar -->
           <div class="list-controls">
             <button class="btn btn-success" id="btnRecarregar">
               🔄 Recarregar Lista
@@ -107,17 +93,13 @@
             </div>
           </div>
 
-          <!-- Mensagem de carregando -->
           <div id="loadingMessage" class="message message-info">
             Carregando produtos...
           </div>
-
-          <!-- Mensagem de lista vazia -->
           <div id="emptyMessage" class="message message-info">
             Nenhum produto cadastrado.
           </div>
-          <!-- Tabela será gerada pelo script.js -->
-          <div id="clientsList" class="clients-table-container"></div>
+          <div id="produtoList" class="produtos-table-container"></div>
         </section>
       </div>
     </main>
@@ -131,11 +113,6 @@
     <footer>
       <p>© 2026 - Sistema de Gestão de produtos</p>
     </footer>
-
-    <!-- Modal de Mensagens (feedback ao usuário) -->
-
-    <!-- Script.js carregado no final do body para garantir que
-       o HTML já esteja montado antes do JS executar -->
     <script src="script.js"></script>
   </body>
 </html>
